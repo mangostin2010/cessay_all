@@ -32,3 +32,5 @@ Cessay 웹 서비스는 여러가지 기능들이 있습니다.
     - 사용자는 POST request를 컴퓨터 본채에 보내고 그것에 대한 결과를 받습니다.  
     
 에세이의 문법을 확인하는데 사용하는 language-tool-python 라이브러리는 최소 4GB RAM을 필요시 함으로 컴퓨터 본채에서 호스팅 합니다.
+
+ps. running on rpi need following command: `sudo /home/user/cessay_all/.venv/bin/streamlit run "/home/user/cessay_all/main.py" --server.port 80`
