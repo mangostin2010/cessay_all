@@ -1,0 +1,1 @@
+from dependencies import check_user_url; check_user_url()

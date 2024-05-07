@@ -1,0 +1,6 @@
+deta
+streamlit_extras
+python-docx
+datetime
+pytz
+streamlit_js_eval
