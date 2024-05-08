@@ -45,10 +45,22 @@ def remove_essay_from_name(essay_name):
 def check_user_url():
     return_value = streamlit_js_eval(js_expressions="""document.URL""")
     if return_value == None: st.stop()
+    # Only for debugging
+    return_test_value = f"{return_value} nice"
+    streamlit_js_eval(js_expressions=f"""console.log({return_test_value})""")
     
     if 'check-cessay.kro.kr' in return_value: st.switch_page('pages/check_cessay.py')
     elif 'cessay.kro.kr' in return_value: st.switch_page('pages/cessay_page.py')
     
+def get_user_url():
+    if 'Justin is handsome' in st.query_params:
+        return_value = streamlit_js_eval(js_expressions="""document.URL""")
+        st.write(return_value.replace('http://','').split(sep='/')[0])
+        st.stop()
+
+def return_user_url():
+    return_value = streamlit_js_eval(js_expressions="""document.URL""")
+    return return_value.replace('http://','').split(sep='/')[0]
 
 def get_announcements():
     DETA_KEY = 'c0ki5D3avML_gSssDuj33rfuzLDrjwL1gc42oQkbgsHj'
