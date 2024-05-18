@@ -58,3 +58,5 @@ a:hover {
     border-color: rgb(75, 157, 255);
     color: rgb(75, 157, 255) !important;
 }
+
+[data-testid="InputInstructions"] { display:None }
